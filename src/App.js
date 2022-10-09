@@ -14,7 +14,7 @@ function App() {
       alert("Preencha algum cep!");
       return;
     }
-    
+
     try {
       const response = await api.get(`${input}/json`);
       setCep(response.data);
@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1 className="title">Buscador CEP</h1>
+        <h1 className="title">Buscar CEP</h1>
 
         <div className="containerInput">
           <input
@@ -40,12 +40,12 @@ function App() {
           />
 
           <button className="buttonSearch" onClick={handleSearch}>
-            <FiSearch size={35} color="#FFF" />
+            <FiSearch size={28} color="#FFF" />
           </button>
         </div>
 
         {Object.keys(cep).length > 0 && (
-          <main className="main">
+          <main className="main ">
             <h2>CEP: {cep.cep}</h2>
 
             <span>{cep.logradouro}</span>
